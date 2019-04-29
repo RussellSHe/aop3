@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+  <!--  <context:component-scan base-package="AopCase"/>
+   &lt;!&ndash; <bean id="accountService" class="AopCase.Service.impl.AccountSereviceImpl">
+        <property name="accountDao" ref="accountDao"/>
+    </bean>
+
+    <bean id="accountDao" class="AopCase.dao.impl.AccountDao">
+        <property name="jt" ref="jt"/>
+    </bean>&ndash;&gt;
+
+    <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="ds"/>
+    </bean>
+    <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/user"/>
+        <property name="username" value="root"/>
+        <property name="password" value="adgjl789"/>
+    </bean>
+    &lt;!&ndash; 开启事务管理器 &ndash;&gt;
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="ds"/>
+    </bean>
+    &lt;!&ndash; 开启Spring对注解事务的支持 &ndash;&gt;
+    <tx:annotation-driven transaction-manager="txManager"/>
+
+
+    &lt;!&ndash;<bean id="logger" class="AopCase.utils.Logger" />
+
+    <aop:config>
+        &lt;!&ndash; 切入点表达式写在aop:aspect外面 所有切面可用 但必须写在切面标签前面 &ndash;&gt;
+        <aop:pointcut id="ptl" expression="execution(* AopCase.Service.impl.*.*(..))"/>
+        <aop:aspect id="logAdvice" ref="logger">
+            &lt;!&ndash; 前置通知 &ndash;&gt;
+            &lt;!&ndash; 切入点表达式标准写法 execution(访问修饰符 返回值 包名.类名.方法名(参数列表)) &ndash;&gt;
+            &lt;!&ndash; 实际开发中切到业务层实现类下的所有方法 &ndash;&gt;
+            <aop:before method="printLog" pointcut-ref="ptl"/>
+            <aop:around method="aroundLog" pointcut-ref="ptl"/>
+        </aop:aspect>
+    </aop:config>&ndash;&gt;
+-->
+
+</beans>
